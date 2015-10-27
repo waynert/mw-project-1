@@ -102,11 +102,15 @@ li {
 .intro-text:after {
   content: "";
   display: block;
-  width: 556px;
+  max-width: 556px;
+  width: 100%;
   height: 30px;
   background: url('http://jeremyabrahams.github.io/mw-project-1/img/divider.png') no-repeat;
   margin: auto;
   margin-top: 40px;
+}
+.goals {
+  margin-bottom: 100px;
 }
 .goals-title {
   text-align: center;
@@ -127,8 +131,15 @@ li {
   font-size: 16px;
   line: 18px;
 }
-.goals-list li:nth-child(3n+1) {
-  clear: left;
+@media only screen and (min-width: 767px) {
+  .goals-list li:nth-child(3n+1) {
+    clear: left;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+  .goals-list li:nth-child(odd) {
+    clear: left;
+  }
 }
 .goals-list li h2 {
   font-weight: 700;
@@ -148,23 +159,27 @@ li {
   padding: 0px;
 }
 .students-list>li {
-  width:98%;
+  width: 98%;
   float: left;
   display: block;
   padding: 1.0%;
 }
-
 @media only screen and (min-width: 480px) {
-  .students-list>li {width:48%;}
-  .goals-list li {width: calc(50% - 40px);}
+  .students-list>li {
+    width: 48%;
+  }
+  .goals-list li {
+    width: calc(50% - 40px);
+  }
 }
-
 @media only screen and (min-width: 767px) {
-  .students-list>li {width:23%;}
-  .goals-list li {width: calc(33% - 40px);}
+  .students-list>li {
+    width: 23%;
+  }
+  .goals-list li {
+    width: calc(33% - 40px);
+  }
 }
-
-
 .students-list>li img {
   border-radius: 50%;
   width: 100%;
@@ -184,11 +199,11 @@ li {
   margin: 10px;
   display: inline-block;
 }
-.facebook, .twitter {
+.facebook, .twitter, .linkedin {
   background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/slice.png');
   background-repeat: no-repeat;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   display: block;
   text-indent: 150%;
   white-space: nowrap;
@@ -199,6 +214,9 @@ li {
 }
 .facebook {
   background-position: -40px;
+}
+.linkedin {
+  background-position: -104px;
 }
 .instructor {
   clear: both;
