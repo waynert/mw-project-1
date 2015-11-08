@@ -1,3 +1,4 @@
+/* Global */
 body {
   margin: 0px;
 }
@@ -17,12 +18,15 @@ li {
   list-style-type: none;
   padding: 0px;
 }
-.container {
-  width: 100%;
-  max-width: 960px;
-  margin: auto auto;
-  display: block;
-}
+
+
+/* Sass */
+$orange: #E66244;
+$light-grey: #fafafa;
+$medium-grey: #C3BFBF;
+$dark-grey: #777777;
+$darker-grey: #444444;
+
 
 /* ---------- Header ----------*/
 .header {
@@ -31,20 +35,21 @@ li {
   top: 0px;
   width: calc(100% - 68px);
   padding: 18px 34px;
+
+  h1 {
+    margin: 0px;
+  }
 }
 .header-title {
   float: left;
-  background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/factory-logo.png');
-  background-repeat: no-repeat;
   height: 102px;
   width: 158px;
   display: block;
   text-indent: 150%;
   white-space: nowrap;
   overflow: hidden;
-}
-.header>h1 {
-  margin: 0px;
+  background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/factory-logo.png');
+  background-repeat: no-repeat;
 }
 .header-nav {
   float: right;
@@ -52,33 +57,35 @@ li {
 }
 .header-nav-list {
   list-style-type: none;
-}
-.header-nav-list li a {
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 18px;
-  color: #ffffff;
-}
-.header-nav-list li {
-  float: left;
-  padding-left: 20px;
+
+  li {
+    float: left;
+    padding-left: 20px;
+
+    a {
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      color: white;
+    }
+  }
 }
 
 /* ---------- Banner ----------*/
 .banner {
-  background: url('http://jeremyabrahams.github.io/mw-project-1/img/hero.jpg') #cb553a;
-  clear: both;
-  padding: 0px;
   float: none;
   background-repeat: no-repeat;
   background-size: cover;
+  clear: both;
+  padding: 0px;
+  background: url('http://jeremyabrahams.github.io/mw-project-1/img/hero.jpg') $orange;
 }
 .banner-title {
   text-align: center;
   font-size: 92px;
-  color: #eee;
+  color: white;
   margin: 0px;
   padding-top: 255px;
   padding-bottom: 0px;
@@ -90,16 +97,17 @@ li {
   color: white;
   font-size: 18px;
   font-weight: 100;
-}
-.banner-text::after {
-  content: "</>";
-  display: block;
+
+  &:after {
+    content: "</>";
+    display: block;
+  }
 }
 
 /* ---------- Intro ----------*/
 .intro-text {
   text-align: center;
-  color: #C3BFBF;
+  color: $medium-grey;
   font-size: 32px;
   padding-top: 100px;
   font-weight: 100;
@@ -107,16 +115,17 @@ li {
   font-weight: 100;
   max-width: 800px;
   margin: auto;
-}
-.intro-text:after {
-  content: "";
-  display: block;
-  max-width: 556px;
-  width: 100%;
-  height: 30px;
-  background: url('http://jeremyabrahams.github.io/mw-project-1/img/divider.png') no-repeat;
-  margin: auto;
-  margin-top: 40px;
+
+  &:after {
+    content: "";
+    display: block;
+    max-width: 556px;
+    width: 100%;
+    height: 30px;
+    background: url('http://jeremyabrahams.github.io/mw-project-1/img/divider.png') no-repeat;
+    margin: auto;
+    margin-top: 40px;
+  }
 }
 
 /* ---------- Goals ----------*/
@@ -125,45 +134,55 @@ li {
 }
 .goals-title {
   text-align: center;
-  color: #777777;
+  color: $dark-grey;
   font-size: 28px;
   text-transform: uppercase;
   font-weight: 500;
   padding-bottom: 69px;
 }
+
 .goals-list {
   overflow: hidden;
+
+  li {
+    width: calc(100% - 40px);
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 100px;
+    font-weight: 400;
+    color: $dark-grey;
+    font-size: 16px;
+    line-height: 18px;
+
+    &:nth-child(3n+1) {
+      @media only screen and (min-width: 767px) {
+        clear: left;}
+    }
+    &:nth-child(odd) {
+      @media only screen and (max-width: 767px) and (min-width: 480px) {
+        clear: left;
+      }
+      .goals-list li h2 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+    }
+    @media only screen and (min-width: 480px) {
+      width: calc(50% - 40px);
+    }
+    @media only screen and (min-width: 767px) {
+        width: calc(33% - 40px);
+      }
+    }
 }
-.goals-list li {
-  width: calc(100% - 40px);
-  float: left;
-  margin-right: 40px;
-  margin-bottom: 100px;
-  font-weight: 400;
-  color: #777777;
-  font-size: 16px;
-  line: 18px;
-}
-@media only screen and (min-width: 767px) {
-  .goals-list li:nth-child(3n+1) {
-    clear: left;
-  }
-}
-@media only screen and (max-width: 767px) and (min-width: 480px) {
-  .goals-list li:nth-child(odd) {
-    clear: left;
-  }
-}
-.goals-list li h2 {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 16px;
-}
+
+
 
 /* ---------- Students ----------*/
 .students {
   clear: both;
-  background-color: #fafafa;
+  background-color: $light-grey;
 }
 .students-title {
   text-align: center;
@@ -172,48 +191,43 @@ li {
 .students-list {
   overflow: auto;
   padding: 0px;
-}
-.students-list>li {
-  width: 98%;
-  float: left;
-  display: block;
-  padding: 1.0%;
-}
-@media only screen and (min-width: 480px) {
-  .students-list>li {
-    width: 48%;
+
+  >li {
+    width: 98%;
+    float: left;
+    display: block;
+    padding: 1.0%;
+
+    @media only screen and (min-width: 480px) {
+      width: 48%;
+    }
+    @media only screen and (min-width: 767px) {
+      width: 23%;
+    }
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+    &:nth-child(4n+1) {
+      clear: left;
+    }
+    h2 {
+      text-align: center;
+      font-weight: 100;
+    }
   }
-  .goals-list li {
-    width: calc(50% - 40px);
-  }
 }
-@media only screen and (min-width: 767px) {
-  .students-list>li {
-    width: 23%;
-  }
-  .goals-list li {
-    width: calc(33% - 40px);
-  }
-}
-.students-list>li img {
-  border-radius: 50%;
-  width: 100%;
-}
-.students-list>li:nth-child(4n+1) {
-  clear: left;
-}
-.students-list li h2 {
-  text-align: center;
-  font-weight: 100;
-}
+
+
 .student-social {
   text-align: center;
   padding: 0px;
+  li {
+    margin: 10px;
+    display: inline-block;
+  }
 }
-.student-social li {
-  margin: 10px;
-  display: inline-block;
-}
+
 .facebook, .twitter, .linkedin {
   background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/slice.png');
   background-repeat: no-repeat;
@@ -244,25 +258,22 @@ li {
 }
 .instructor-text {
   padding-top: 208px;
-      padding-bottom: 200px;
-      padding-left: 64px;
-      width: 50%;
-      position: absolute;
-      top: 0px;
-      color: #FFFFFF;
-}
+  padding-bottom: 200px;
+  padding-left: 64px;
+  width: 50%;
+  position: absolute;
+  top: 0px;
+  color: white;
 
-@media only screen and (max-width: 767px) {
-
-.instructor-text {
-width: calc(100% - 64px);
-position: relative;
-padding-top: 35px;
-background: #111;
-top: -4px;
-padding-left: 32px;
-padding-right: 32px;
-}
+  @media only screen and (max-width: 767px) {
+    width: calc(100% - 64px);
+    position: relative;
+    padding-top: 35px;
+    background: $dark-grey;
+    top: -4px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 /* ---------- Quote ---------- */
@@ -270,9 +281,9 @@ padding-right: 32px;
   background-color:white;
   padding: 0px;
   margin: 0px;
-}
-.quote > blockquote > p {
-  color: #E66244;
+
+  >blockquote > p {
+    color: $orange;
     font-size: 48px;
     line-height: 64px;
     font-weight: 300;
@@ -280,15 +291,32 @@ padding-right: 32px;
     max-width: 880px;
     margin: auto;
     text-align: center;
-}
 
-.quote > blockquote > p:before, .quote > blockquote > p:after  {
-  content: "''";
-  display: inline-block;
+    &:before, &:after  {
+      content: "''";
+      display: inline-block;
+    }
+  }
 }
 
 
 /* ---------- Overview ----------*/
+.overview-list {
+  padding-top: 208px;
+  padding-bottom: 200px;
+  padding-left: 64px;
+  width: 50%;
+  color: white;
+  dt {
+    float:left;
+    &:after {
+      content: ":";
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}
+
 .overview-title {
   position: absolute;
   margin: -1px;
@@ -320,9 +348,14 @@ padding-right: 32px;
   white-space: nowrap;
   overflow: hidden;
   margin-top: 0px;
+  float:left;
 }
-footer {}
-footer:after {
+footer {
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(180, 80, 60, 0.75);
+
+  &after {
     content:'';
     background-color:#111;
     position:absolute;
@@ -330,9 +363,9 @@ footer:after {
     top:0;
     left:0;
     opacity:0.5;
+  }
 }
-
-
-.orange {
-  background: url('http://jeremyabrahams.github.io/mw-project-1/img/footer.jpg') #cb553a;
+.footer-img {
+  background: url('http://jeremyabrahams.github.io/mw-project-1/img/footer.jpg') $orange;
+  background-size: cover;
 }
