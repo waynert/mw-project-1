@@ -1,0 +1,23 @@
+{
+  "name": "mw-project-1",
+  "version": "1.0.0",
+  "description": "This is being changed on the develop branch!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waynert/mw-project-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waynert/mw-project-1/issues"
+  },
+  "homepage": "https://github.com/waynert/mw-project-1#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.0"
+  }
+}
