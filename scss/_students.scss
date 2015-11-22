@@ -17,10 +17,10 @@
     display: block;
     padding: 1.0%;
 
-    @media only screen and (min-width: 480px) {
+    @include iphone-up {
       width: 48%;
     }
-    @media only screen and (min-width: 767px) {
+    @include tablet-up {
       width: 23%;
     }
     img {
