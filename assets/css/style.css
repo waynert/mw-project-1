@@ -55,11 +55,10 @@ li {
 /* ---------- Banner ----------*/
 .banner {
   float: none;
-  background-repeat: no-repeat;
+  background: url("http://jeremyabrahams.github.io/mw-project-1/img/hero.jpg") #E66244 no-repeat;
   background-size: cover;
-  clear: both;
   padding: 0px;
-  background: url("http://jeremyabrahams.github.io/mw-project-1/img/hero.jpg") #E66244; }
+  clear: both; }
 
 .banner-title {
   text-align: center;
@@ -134,16 +133,19 @@ li {
       text-transform: uppercase;
       font-size: 16px;
       padding-bottom: 20px; }
-    @media only screen and (min-width: 480px) {
+    @media (max-width: 767px) {
+      .goals-list li {
+        width: calc(100% - 40px); } }
+    @media (min-width: 768px) and (max-width: 1023px) {
       .goals-list li {
         width: calc(50% - 40px); } }
-    @media only screen and (min-width: 767px) {
+    @media (min-width: 1024px) {
       .goals-list li {
         width: calc(33% - 40px); } }
-    @media only screen and (min-width: 767px) {
+    @media (min-width: 1024px) {
       .goals-list li:nth-child(3n+1) {
         clear: left; } }
-    @media only screen and (max-width: 767px) and (min-width: 480px) {
+    @media (min-width: 768px) and (max-width: 1023px) {
       .goals-list li:nth-child(odd) {
         clear: left; } }
 
@@ -164,10 +166,10 @@ li {
     float: left;
     display: block;
     padding: 1.0%; }
-    @media only screen and (min-width: 480px) {
+    @media (min-width: 0px) {
       .students-list > li {
         width: 48%; } }
-    @media only screen and (min-width: 767px) {
+    @media (min-width: 768px) {
       .students-list > li {
         width: 23%; } }
     .students-list > li img {
@@ -221,7 +223,7 @@ li {
   position: absolute;
   top: 0px;
   color: white; }
-  @media only screen and (max-width: 767px) {
+  @media (max-width: 767px) {
     .instructor-text {
       width: calc(100% - 64px);
       position: relative;
