@@ -8,6 +8,10 @@
 
   h1 {
     margin: 0px;
+    @include smartphone {
+      margin: auto;
+      width: 158px;
+    }
   }
 }
 .header-title {
