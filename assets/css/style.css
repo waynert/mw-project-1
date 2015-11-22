@@ -1,4 +1,4 @@
-/* Global */
+/* Global CSS */
 body {
   margin: 0px; }
 
@@ -7,18 +7,13 @@ body {
   padding: 0px;
   margin: 0px; }
 
-.clearfix:before, .clearfix:after {
-  content: "";
-  display: table; }
-
-.clearfix:after {
-  clear: both; }
-
 li {
   list-style-type: none;
   padding: 0px; }
 
-/* Sass */
+/* Sass Variables */
+/* Sass Mixins */
+/* Sass Imports */
 /* ---------- Header ----------*/
 .header {
   /*position: fixed;*/
@@ -108,7 +103,7 @@ li {
 
 /* ---------- Goals ----------*/
 .goals {
-  margin: 69px 25px 100px 25px; }
+  margin: 69px 25px 100px; }
 
 .goals-title {
   text-align: center;
@@ -120,6 +115,11 @@ li {
 
 .goals-list {
   overflow: hidden; }
+  .goals-list:before, .goals-list:after {
+    content: "";
+    display: table; }
+  .goals-list:after {
+    clear: both; }
   .goals-list li {
     width: calc(100% - 40px);
     float: left;
@@ -129,22 +129,23 @@ li {
     color: #777777;
     font-size: 16px;
     line-height: 18px; }
-    @media only screen and (min-width: 767px) {
-      .goals-list li:nth-child(3n+1) {
-        clear: left; } }
-    @media only screen and (max-width: 767px) and (min-width: 480px) {
-      .goals-list li:nth-child(odd) {
-        clear: left; } }
-    .goals-list li:nth-child(odd) .goals-list li h2 {
+    .goals-list li h2 {
       font-weight: 700;
       text-transform: uppercase;
-      font-size: 16px; }
+      font-size: 16px;
+      padding-bottom: 20px; }
     @media only screen and (min-width: 480px) {
       .goals-list li {
         width: calc(50% - 40px); } }
     @media only screen and (min-width: 767px) {
       .goals-list li {
         width: calc(33% - 40px); } }
+    @media only screen and (min-width: 767px) {
+      .goals-list li:nth-child(3n+1) {
+        clear: left; } }
+    @media only screen and (max-width: 767px) and (min-width: 480px) {
+      .goals-list li:nth-child(odd) {
+        clear: left; } }
 
 /* ---------- Students ----------*/
 .students {

@@ -1,4 +1,4 @@
-/* Global */
+/* Global CSS */
 body {
   margin: 0px;
 }
@@ -6,31 +6,22 @@ body {
   font-family: 'Roboto', arial, helvetica, sans-serif;
   padding:0px;
   margin:0px;
-  border: solid blue thin;
 }
-
 li {
   list-style-type: none;
   padding: 0px;
 }
 
-@import header;
-@import banner;
-@import goals;
-@import students;
-@import instructor;
-@import overview;
-@import footer;
 
-
-
-/* Sass */
+/* Sass Variables */
 $orange: #E66244;
 $light-grey: #fafafa;
 $medium-grey: #C3BFBF;
 $dark-grey: #777777;
 $darker-grey: #444444;
 
+
+/* Sass Mixins */
 @mixin clearfix   {
   &:before, &:after {
   content: "";
@@ -40,3 +31,15 @@ $darker-grey: #444444;
   clear: both;
   }
 }
+
+
+/* Sass Imports */
+@import 'header';
+@import 'banner';
+@import 'intro';
+@import 'goals';
+@import 'students';
+@import 'instructor';
+@import 'quote';
+@import 'overview';
+@import 'footer';
