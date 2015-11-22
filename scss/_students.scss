@@ -1,0 +1,68 @@
+/* ---------- Students ----------*/
+.students {
+  clear: both;
+  background-color: $light-grey;
+}
+.students-title {
+  text-align: center;
+  padding-top: 100px;
+}
+.students-list {
+  overflow: auto;
+  padding: 0px;
+
+  >li {
+    width: 98%;
+    float: left;
+    display: block;
+    padding: 1.0%;
+
+    @media only screen and (min-width: 480px) {
+      width: 48%;
+    }
+    @media only screen and (min-width: 767px) {
+      width: 23%;
+    }
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+    &:nth-child(4n+1) {
+      clear: left;
+    }
+    h2 {
+      text-align: center;
+      font-weight: 100;
+    }
+  }
+}
+
+
+.student-social {
+  text-align: center;
+  padding: 0px;
+  li {
+    margin: 10px;
+    display: inline-block;
+  }
+}
+
+.facebook, .twitter, .linkedin {
+  background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/slice.png');
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-indent: 150%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.twitter {
+  background-postition: 0px;
+}
+.facebook {
+  background-position: -40px;
+}
+.linkedin {
+  background-position: -104px;
+}
