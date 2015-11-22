@@ -1,0 +1,27 @@
+/* ---------- Instructor ----------*/
+.instructor {
+  clear: both;
+  position: relative;
+}
+.instructor-bkrd {
+  width: 100%;
+}
+.instructor-text {
+  padding-top: 208px;
+  padding-bottom: 200px;
+  padding-left: 64px;
+  width: 50%;
+  position: absolute;
+  top: 0px;
+  color: white;
+
+  @media only screen and (max-width: 767px) {
+    width: calc(100% - 64px);
+    position: relative;
+    padding-top: 35px;
+    background: $dark-grey;
+    top: -4px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}

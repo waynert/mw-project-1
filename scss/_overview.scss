@@ -1,0 +1,37 @@
+/* ---------- Overview ----------*/
+.overview-list {
+  padding-top: 208px;
+  padding-bottom: 200px;
+  padding-left: 64px;
+  width: 50%;
+  color: white;
+  dt {
+    float:left;
+    &:after {
+      content: ":";
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}
+
+.overview-title {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.overview-hide {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

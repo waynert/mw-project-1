@@ -1,0 +1,30 @@
+/* ---------- Banner ----------*/
+.banner {
+  float: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clear: both;
+  padding: 0px;
+  background: url('http://jeremyabrahams.github.io/mw-project-1/img/hero.jpg') $orange;
+}
+.banner-title {
+  text-align: center;
+  font-size: 92px;
+  color: white;
+  margin: 0px;
+  padding-top: 255px;
+  padding-bottom: 0px;
+  font-weight: 100;
+}
+.banner-text {
+  text-align: center;
+  padding-bottom: 236px;
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+
+  &:after {
+    content: "</>";
+    display: block;
+  }
+}
