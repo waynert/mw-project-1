@@ -1,0 +1,31 @@
+/* ---------- Footer ----------*/
+.footer-title {
+  background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/factory-logo.png');
+  background-repeat: no-repeat;
+  height: 102px;
+  width: 158px;
+  text-indent: 150%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 0px;
+  float:left;
+}
+footer {
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(180, 80, 60, 0.75);
+
+  &after {
+    content:'';
+    background-color:#111;
+    position:absolute;
+    display: block;
+    top:0;
+    left:0;
+    opacity:0.5;
+  }
+}
+.footer-img {
+  background: url('http://jeremyabrahams.github.io/mw-project-1/img/footer.jpg') $orange;
+  background-size: cover;
+}
