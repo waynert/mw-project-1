@@ -17,18 +17,35 @@
     display: block;
     padding: 1.0%;
 
-    @include iphone-up {
+
+    @include smartphone {
       width: 48%;
+      &:nth-child(2n+1) {
+        clear: left;
+      }
     }
-    @include tablet-up {
+
+    @include smartphone-small {
+      width: 98%;
+    }
+
+    @include tablet {
+      width: 31%;
+      &:nth-child(3n+1) {
+        clear: left;
+      }
+    }
+
+    @include desktop {
       width: 23%;
+      &:nth-child(4n+1) {
+        clear: left;
+      }
     }
+
     img {
       border-radius: 50%;
       width: 100%;
-    }
-    &:nth-child(4n+1) {
-      clear: left;
     }
     h2 {
       text-align: center;

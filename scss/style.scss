@@ -33,35 +33,46 @@ $darker-grey: #444444;
 }
 
 
-$iphone-width: 480px;
+$smartphone-width: 480px;
+$tablet-small-width:640px;
 $tablet-width: 768px;
+$tablet-landscape-width: 960px;
 $desktop-width: 1024px;
+$retinat-width: 1280px;
 
-@mixin iphone {
-  @media (max-width: #{$tablet-width - 1px}) {
+
+
+@mixin smartphone-small {
+  @media (max-width: #{$smartphone-width - 1px}) {
     @content;
   }
 }
 
+@mixin smartphone {
+  @media (max-width: #{$tablet-small-width - 1px}) {
+    @content;
+  }
+}
+
+
+@mixin tablet-small {
+  @media (min-width: #{$tablet-small-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media (min-width: #{$tablet-landscape-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (min-width: #{$tablet-small-width}) and (max-width: #{$desktop-width - 1px}) {
     @content;
   }
 }
 
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
-    @content;
-  }
-}
-
-@mixin iphone-up {
-  @media (min-width: 0px) {
-    @content;
-  }
-}
-@mixin tablet-up {
-  @media (min-width: #{$tablet-width}) {
     @content;
   }
 }
@@ -77,3 +88,28 @@ $desktop-width: 1024px;
 @import 'quote';
 @import 'overview';
 @import 'footer';
+
+
+/* @include smartphone {
+  background-color: blue;
+}
+
+@include smartphone-small {
+  background-color: green;
+}
+
+@include tablet {
+  background-color: red;
+}
+
+@include tablet-landscape {
+  background-color: orange;
+}
+
+@include tablet-small {
+  background-color: purple;
+}
+
+@include desktop {
+  background-color: yellow;
+} */

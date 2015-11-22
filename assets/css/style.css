@@ -23,6 +23,10 @@ li {
   padding: 18px 34px; }
   .header h1 {
     margin: 0px; }
+    @media (max-width: 639px) {
+      .header h1 {
+        margin: auto;
+        width: 158px; } }
 
 .header-title {
   float: left;
@@ -133,10 +137,10 @@ li {
       text-transform: uppercase;
       font-size: 16px;
       padding-bottom: 20px; }
-    @media (max-width: 767px) {
+    @media (max-width: 639px) {
       .goals-list li {
         width: calc(100% - 40px); } }
-    @media (min-width: 768px) and (max-width: 1023px) {
+    @media (min-width: 640px) and (max-width: 1023px) {
       .goals-list li {
         width: calc(50% - 40px); } }
     @media (min-width: 1024px) {
@@ -145,7 +149,7 @@ li {
     @media (min-width: 1024px) {
       .goals-list li:nth-child(3n+1) {
         clear: left; } }
-    @media (min-width: 768px) and (max-width: 1023px) {
+    @media (min-width: 640px) and (max-width: 1023px) {
       .goals-list li:nth-child(odd) {
         clear: left; } }
 
@@ -166,17 +170,27 @@ li {
     float: left;
     display: block;
     padding: 1.0%; }
-    @media (min-width: 0px) {
+    @media (max-width: 639px) {
       .students-list > li {
-        width: 48%; } }
-    @media (min-width: 768px) {
+        width: 48%; }
+        .students-list > li:nth-child(2n+1) {
+          clear: left; } }
+    @media (max-width: 479px) {
       .students-list > li {
-        width: 23%; } }
+        width: 98%; } }
+    @media (min-width: 640px) and (max-width: 1023px) {
+      .students-list > li {
+        width: 31%; }
+        .students-list > li:nth-child(3n+1) {
+          clear: left; } }
+    @media (min-width: 1024px) {
+      .students-list > li {
+        width: 23%; }
+        .students-list > li:nth-child(4n+1) {
+          clear: left; } }
     .students-list > li img {
       border-radius: 50%;
       width: 100%; }
-    .students-list > li:nth-child(4n+1) {
-      clear: left; }
     .students-list > li h2 {
       text-align: center;
       font-weight: 100; }
@@ -223,7 +237,7 @@ li {
   position: absolute;
   top: 0px;
   color: white; }
-  @media (max-width: 767px) {
+  @media (max-width: 639px) {
     .instructor-text {
       width: calc(100% - 64px);
       position: relative;
@@ -313,3 +327,27 @@ footer {
 .footer-img {
   background: url("http://jeremyabrahams.github.io/mw-project-1/img/footer.jpg") #E66244;
   background-size: cover; }
+
+/* @include smartphone {
+  background-color: blue;
+}
+
+@include smartphone-small {
+  background-color: green;
+}
+
+@include tablet {
+  background-color: red;
+}
+
+@include tablet-landscape {
+  background-color: orange;
+}
+
+@include tablet-small {
+  background-color: purple;
+}
+
+@include desktop {
+  background-color: yellow;
+} */
