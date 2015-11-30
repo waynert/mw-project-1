@@ -7,7 +7,7 @@
   color: $dark-grey;
   font-size: 28px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: $medium;
   padding-bottom: 69px;
 }
 .goals-list {
@@ -18,12 +18,12 @@
     float: left;
     margin-right: 40px;
     margin-bottom: 100px;
-    font-weight: 400;
+    font-weight: $normal;
     color: $dark-grey;
     font-size: 16px;
     line-height: 18px;
     h2 {
-      font-weight: 700;
+      font-weight: $bold;
       text-transform: uppercase;
       font-size: 16px;
       padding-bottom: 20px;

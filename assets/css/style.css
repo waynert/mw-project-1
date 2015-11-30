@@ -164,12 +164,12 @@ li {
 
 .students-list {
   overflow: auto;
-  padding: 0px; }
+  padding: 20px 0px 130px 0px; }
   .students-list > li {
     width: 98%;
     float: left;
     display: block;
-    padding: 1.0%; }
+    padding: 70px 1.0% 0px 1.0%; }
     @media (max-width: 639px) {
       .students-list > li {
         width: 48%; }
@@ -234,44 +234,93 @@ li {
   padding-bottom: 200px;
   padding-left: 64px;
   width: 50%;
+  max-width: 550px;
+  color: white;
   position: absolute;
-  top: 0px;
-  color: white; }
+  top: 50%;
+  transform: translate(0%, -50%); }
+  .instructor-text .instructor-text-title {
+    font-size: 18px;
+    font-weight: 100;
+    text-transform: uppercase; }
+  .instructor-text .instructor-text-subtitle {
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 15px; }
+  .instructor-text .instructor-text-location {
+    padding-bottom: 27px;
+    font-size: 22px; }
   @media (max-width: 639px) {
     .instructor-text {
       width: calc(100% - 64px);
       position: relative;
-      padding-top: 35px;
+      padding: 35px 32px;
       background: #777777;
-      top: -4px;
-      padding-left: 32px;
-      padding-right: 32px; } }
+      transform: none;
+      top: -4px; } }
 
 /* ---------- Quote ---------- */
 .quote {
   background-color: white;
   padding: 0px;
   margin: 0px; }
-  .quote > blockquote > p {
-    color: #E66244;
-    font-size: 48px;
-    line-height: 64px;
-    font-weight: 300;
-    font-style: italic;
-    max-width: 880px;
-    margin: auto;
-    text-align: center; }
-    .quote > blockquote > p:before, .quote > blockquote > p:after {
-      content: "''";
-      display: inline-block; }
+  .quote > blockquote {
+    margin: 170px 10px 74px 10px; }
+    .quote > blockquote > p {
+      color: #E66244;
+      font-size: 48px;
+      line-height: 64px;
+      font-weight: 300;
+      font-style: italic;
+      max-width: 880px;
+      margin: auto;
+      text-align: center; }
+      .quote > blockquote > p:before, .quote > blockquote > p:after {
+        content: "''";
+        display: inline-block; }
+  .quote figcaption {
+    text-align: center;
+    font-size: 22px;
+    color: #AAAAAA;
+    font-weight: 500;
+    padding-bottom: 110px; }
+    .quote figcaption span {
+      display: block;
+      font-size: 16px; }
+    .quote figcaption a {
+      color: #AAAAAA;
+      font-size: 16px; }
 
 /* ---------- Overview ----------*/
+.overview {
+  position: relative;
+  min-height: 500px; }
+  @media (max-width: 639px) {
+    .overview {
+      min-height: 600px; } }
+
 .overview-list {
-  padding-top: 208px;
-  padding-bottom: 200px;
-  padding-left: 64px;
+  float: left;
+  font-size: 36px;
+  font-weight: 300;
+  padding-top: 0px 64px 0px 0px;
   width: 50%;
-  color: white; }
+  max-width: 550px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%); }
+  @media (max-width: 639px) {
+    .overview-list {
+      padding-top: 0px 10px;
+      width: 100%;
+      max-width: 550px;
+      position: relative;
+      top: 0;
+      transform: none; } }
+  .overview-list .overview-space {
+    padding-bottom: 35px; }
   .overview-list dt {
     float: left; }
     .overview-list dt:after {
@@ -299,22 +348,50 @@ li {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+.signup {
+  position: absolute;
+  top: 50%;
+  left: 60%; }
+  @media (max-width: 639px) {
+    .signup {
+      position: relative;
+      left: 0px;
+      padding-top: 100px;
+      float: left; } }
+  .signup a {
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 30px 100px;
+    color: white;
+    font-weight: bold; }
+
 /* ---------- Footer ----------*/
-.footer-title {
+.footer-title a {
   background-image: url("http://jeremyabrahams.github.io/mw-project-1/img/factory-logo.png");
   background-repeat: no-repeat;
-  height: 102px;
-  width: 158px;
+  height: 64px;
+  width: 100px;
   text-indent: 150%;
   white-space: nowrap;
   overflow: hidden;
   margin-top: 0px;
-  float: left; }
+  float: left;
+  background-size: 100px 64px;
+  margin: 20px; }
 
 footer {
   display: inline-block;
   width: 100%;
   background-color: rgba(180, 80, 60, 0.75); }
+  footer p {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    padding-top: 45px;
+    margin-left: 50px;
+    float: left; }
   footerafter {
     content: '';
     background-color: #111;
