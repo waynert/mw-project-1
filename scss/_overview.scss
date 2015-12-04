@@ -12,7 +12,7 @@
   float: left;
   font-size: 36px;
   font-weight: 300;
-  padding-top: 0px 64px 0px 0px;;
+  padding-left:50px;
   width: 50%;
   max-width: 550px;
   color: white;
@@ -20,8 +20,9 @@
   top: 50%;
   transform: translate(0%, -50%);
 
-  @include smartphone {
-    padding-top: 0px 10px;
+  // @include smartphone {
+  @media (max-width: 800px) {
+    padding-left:0px;
     width: 100%;
     max-width: 550px;
     position: relative;
@@ -69,7 +70,8 @@
   top: 50%;
   left: 60%;
 
-  @include smartphone {
+  // @include smartphone {
+  @media (max-width: 800px) {
     position: relative;
     left: 0px;
     padding-top: 100px;
