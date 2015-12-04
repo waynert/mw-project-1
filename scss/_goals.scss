@@ -1,49 +1,51 @@
 /* ---------- Goals ----------*/
 .goals {
-  margin: 69px 25px 100px 25px;
+  margin: 69px 25px 100px;
 }
 .goals-title {
   text-align: center;
   color: $dark-grey;
   font-size: 28px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: $medium;
   padding-bottom: 69px;
 }
-
 .goals-list {
   overflow: hidden;
   @include clearfix;
-
   li {
     width: calc(100% - 40px);
     float: left;
     margin-right: 40px;
     margin-bottom: 100px;
-    font-weight: 400;
+    font-weight: $normal;
     color: $dark-grey;
     font-size: 16px;
     line-height: 18px;
-
-    &:nth-child(3n+1) {
-      @media only screen and (min-width: 767px) {
-        clear: left;}
+    h2 {
+      font-weight: $bold;
+      text-transform: uppercase;
+      font-size: 16px;
+      padding-bottom: 20px;
     }
-    &:nth-child(odd) {
-      @media only screen and (max-width: 767px) and (min-width: 480px) {
-        clear: left;
-      }
-      .goals-list li h2 {
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 16px;
-      }
+    @include smartphone {
+      width: calc(100% - 40px);
     }
-    @media only screen and (min-width: 480px) {
+    @include tablet {
       width: calc(50% - 40px);
     }
-    @media only screen and (min-width: 767px) {
-        width: calc(33% - 40px);
+    @include desktop {
+      width: calc(33% - 40px);
+    }
+    &:nth-child(3n+1) {
+      @include desktop {
+        clear: left;
       }
     }
+    &:nth-child(odd) {
+      @include tablet {
+        clear: left;
+      }
+    }
+  }
 }

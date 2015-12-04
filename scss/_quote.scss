@@ -4,19 +4,40 @@
   padding: 0px;
   margin: 0px;
 
-  >blockquote > p {
-    color: $orange;
-    font-size: 48px;
-    line-height: 64px;
-    font-weight: 300;
-    font-style: italic;
-    max-width: 880px;
-    margin: auto;
-    text-align: center;
+  >blockquote {
+  margin: 170px 10px 74px 10px;
 
-    &:before, &:after  {
-      content: "''";
-      display: inline-block;
+    > p {
+      color: $orange;
+      font-size: 48px;
+      line-height: 64px;
+      font-weight: $light;
+      font-style: italic;
+      max-width: 880px;
+      margin: auto;
+      text-align: center;
+
+      &:before, &:after  {
+        content: "''";
+        display: inline-block;
+      }
+    }
+  }
+
+  figcaption {
+    text-align: center;
+    font-size: 22px;
+    color: $lighter-grey;
+    font-weight: $medium;
+    padding-bottom: 110px;
+
+    span {
+      display:block;
+      font-size: 16px;
+    }
+    a {
+      color: $lighter-grey;
+      font-size: 16px;
     }
   }
 }

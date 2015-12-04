@@ -11,17 +11,34 @@
   padding-bottom: 200px;
   padding-left: 64px;
   width: 50%;
-  position: absolute;
-  top: 0px;
+  max-width: 550px;
   color: white;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%,-50%);
 
-  @media only screen and (max-width: 767px) {
+  .instructor-text-title {
+    font-size: 18px;
+    font-weight: $thin;
+    text-transform: uppercase;
+  }
+  .instructor-text-subtitle {
+    font-size: 36px;
+    font-weight: $normal;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+  }
+  .instructor-text-location {
+    padding-bottom: 27px;
+    font-size: 22px;
+  }
+
+  @include smartphone {
     width: calc(100% - 64px);
     position: relative;
-    padding-top: 35px;
-    background: $dark-grey;
+    padding: 35px 32px;
+    background: #777777;
+    transform: none;
     top: -4px;
-    padding-left: 32px;
-    padding-right: 32px;
   }
 }

@@ -1,20 +1,32 @@
 /* ---------- Footer ----------*/
 .footer-title {
-  background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/factory-logo.png');
-  background-repeat: no-repeat;
-  height: 102px;
-  width: 158px;
-  text-indent: 150%;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-top: 0px;
-  float:left;
+  a {
+    background-image: url('http://jeremyabrahams.github.io/mw-project-1/img/factory-logo.png');
+    background-repeat: no-repeat;
+    height: 64px;
+    width: 100px;
+    text-indent: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 0px;
+    float: left;
+    background-size: 100px 64px;
+    margin: 20px;
+  }
 }
 footer {
   display: inline-block;
   width: 100%;
   background-color: rgba(180, 80, 60, 0.75);
 
+  p {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  padding-top: 45px;
+  margin-left: 50px;
+  float: left;
+  }
   &after {
     content:'';
     background-color:#111;

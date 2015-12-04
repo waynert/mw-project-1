@@ -1,10 +1,39 @@
 /* ---------- Overview ----------*/
+.overview {
+  position: relative;
+  min-height: 500px;
+
+  @include smartphone {
+    min-height: 600px;
+  }
+}
+
 .overview-list {
-  padding-top: 208px;
-  padding-bottom: 200px;
-  padding-left: 64px;
+  float: left;
+  font-size: 36px;
+  font-weight: 300;
+  padding-left:50px;
   width: 50%;
+  max-width: 550px;
   color: white;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+
+  // @include smartphone {
+  @media (max-width: 800px) {
+    padding-left:0px;
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    top: 0;
+    transform: none;
+  }
+
+  .overview-space {
+    padding-bottom: 35px;
+  }
+
   dt {
     float:left;
     &:after {
@@ -34,4 +63,29 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.signup {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+
+  // @include smartphone {
+  @media (max-width: 800px) {
+    position: relative;
+    left: 0px;
+    padding-top: 100px;
+    float: left;}
+
+  a {
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 30px 100px;
+    color: white;
+    font-weight: bold;
+  }
+
+
 }

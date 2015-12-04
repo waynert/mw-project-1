@@ -1,4 +1,4 @@
-/* Global */
+/* Global CSS */
 body {
   margin: 0px;
 }
@@ -6,31 +6,29 @@ body {
   font-family: 'Roboto', arial, helvetica, sans-serif;
   padding:0px;
   margin:0px;
-  border: solid blue thin;
 }
-
 li {
   list-style-type: none;
   padding: 0px;
 }
 
-@import header;
-@import banner;
-@import goals;
-@import students;
-@import instructor;
-@import overview;
-@import footer;
 
-
-
-/* Sass */
+/* Sass Variables */
 $orange: #E66244;
+$lighter-grey: #AAAAAA;
 $light-grey: #fafafa;
 $medium-grey: #C3BFBF;
 $dark-grey: #777777;
 $darker-grey: #444444;
 
+$thin: 100;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+
+/* Sass Mixins */
 @mixin clearfix   {
   &:before, &:after {
   content: "";
@@ -40,3 +38,85 @@ $darker-grey: #444444;
   clear: both;
   }
 }
+
+
+$smartphone-width: 480px;
+$tablet-small-width:640px;
+$tablet-width: 768px;
+$tablet-landscape-width: 960px;
+$desktop-width: 1024px;
+$retinat-width: 1280px;
+
+
+
+@mixin smartphone-small {
+  @media (max-width: #{$smartphone-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin smartphone {
+  @media (max-width: #{$tablet-small-width - 1px}) {
+    @content;
+  }
+}
+
+
+@mixin tablet-small {
+  @media (min-width: #{$tablet-small-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media (min-width: #{$tablet-landscape-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-small-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+/* Sass Imports */
+@import 'header';
+@import 'banner';
+@import 'intro';
+@import 'goals';
+@import 'students';
+@import 'instructor';
+@import 'quote';
+@import 'overview';
+@import 'footer';
+
+
+/* @include smartphone {
+  background-color: blue;
+}
+
+@include smartphone-small {
+  background-color: green;
+}
+
+@include tablet {
+  background-color: red;
+}
+
+@include tablet-landscape {
+  background-color: orange;
+}
+
+@include tablet-small {
+  background-color: purple;
+}
+
+@include desktop {
+  background-color: yellow;
+} */
